@@ -13,13 +13,41 @@
     {% endif %}
     <meta charset="UTF-8">
 
-{% seo %}
+    {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <style>
+      .left {
+        float: left;
+        width: 300px;
+        height: 300px;
+      }
+      .content {
+        background-color: orange;
+        margin-left: 310px;
+        height: 300px;
+      }
+      .foot
+      {
+        font-family:"Times New Roman";
+        background-color:#9278f1;
+      }
+      </style>
   </head>
   <body>
-    <main id="content" class="main-content" role="main">
+    <div class='left'>
+        {% for category in site.categories %}
+        <h3>{{ category[0] }}</h3>
+        <ul>
+          {% for post in category[1] %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+        <p class='foot'>南方的热沙，渴望白色山茶花。</p>
+    </div>
+    <main id="content" class="content" role="main">
       {{ content }}
     </main>
   </body>
