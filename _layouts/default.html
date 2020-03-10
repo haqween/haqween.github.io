@@ -20,19 +20,17 @@
     <style>
       .left {
         float: left;
-        width: 300px;
+        width: 200px;
       }
       .content {
-        background-color: orange;
-        margin-left: 310px;
-        height: 100%;
+        margin-left: 210px;
       }
       .foot
       {
         font-family:"Times New Roman";
         background-color:#9278f1;
       }
-      </style>
+    </style>
   </head>
   <body>
     <div class='left'>
@@ -44,10 +42,10 @@
           {% endfor %}
         </ul>
         {% endfor %}
-        <p class='foot'>南方的热沙，渴望白色山茶花。</p>
     </div>
     <main id="content" class="content" role="main">
       {{ content }}
+      <p class='foot'>南方的热沙，渴望白色山茶花。</p>
     </main>
   </body>
 </html>
