@@ -4,8 +4,8 @@
         .plist
         {
             float:left;
-            width:300;
-            height:250;
+            width:200;
+            height:150;
             margin:5px;
         }
     </style>
@@ -14,7 +14,8 @@
         <hr>
         {% for post in category[1] %}
             <div class="plist">
-                <img src="{{post.img}}" width="300" height="228"/>
+                <img src="{{post.img}}" width="200" height="120"/>
+                <br/>
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
         {% endfor %}
