@@ -1,6 +1,45 @@
----
-layout: default
----
-<div style="background-image: url({{page.img}})">
-    {{ content }}
-</div>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
+
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <style>
+        body
+        {
+            background-image:url('{{page.img}}');
+            background-repeat:no-repeat;
+        }
+        .content {
+            margin: 20px;
+        }
+        .foot
+        {
+            font-family:"Times New Roman";
+            background-color:#9278f1;
+        }
+    </style>
+  </head>
+  <body>
+    <main id="content" class="content" role="main">
+        <div class="cintent">
+            {{ content }}
+        </div>
+      <p class='foot'>南方的热沙，渴望白色山茶花。</p>
+    </main>
+  </body>
+</html>
+
