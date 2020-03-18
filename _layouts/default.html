@@ -33,16 +33,6 @@
     </style>
   </head>
   <body>
-    <div class='left'>
-        {% for category in site.categories %}
-        <h3>{{ category[0] }}</h3>
-        <ul>
-          {% for post in category[1] %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endfor %}
-    </div>
     <main id="content" class="content" role="main">
       {{ content }}
       <p class='foot'>南方的热沙，渴望白色山茶花。</p>
