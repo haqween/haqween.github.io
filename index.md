@@ -7,7 +7,7 @@
             text-align: center;
         }
         p.container{
-            padding: 10px;
+            padding: 5px;
         }
     </style>
     {% for category in site.categories %}
@@ -18,7 +18,7 @@
         {% for post in category[1] %}
             <td>
             <div class="card" onclick="window.open('{{ post.url }}')">
-                <img src="{{post.img}}" width="100%" height="120"/>
+                <img src="{{post.img}}" width="100%" height="150"/>
                 <p class="container">{{ post.title }}</p>
             </div>
             </td>
