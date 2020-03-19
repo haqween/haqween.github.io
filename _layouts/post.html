@@ -1,5 +1,23 @@
 ---
 layout: default
 ---
-{{ content }}
+<div>
+    <style>
+        h3 {text-align:center;}
+        div.card{
+            width: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            background-color: #FFFFFF;
+            padding: 5px;
+            margin: 0px 60px;
+        }
+    </style>
+    <div class="card">
+        <h3>{{ page.title }}</h3>
+        <hr>
+        <div>
+            {{ content }}
+        </div>
+    </div>
+</div>
 
